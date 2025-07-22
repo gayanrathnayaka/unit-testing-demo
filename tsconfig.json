@@ -1,17 +1,18 @@
 {
-  "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true,
-    "paths": {
-      "@/*": [
-        "./*"
-      ]
-    }
+    // ... other existing options
+    "moduleResolution": "node16", // Or "nodenext" or "bundler"
+    "target": "es2020", // Adjust as needed for your project
+    "lib": ["es2020", "dom"], // Adjust as needed
+    "types": ["cypress", "node"] // Ensure Cypress types are included
+    // If you were explicitly using "customConditions", keep it here.
+    // For most Cypress setups, you might not even need "customConditions" directly.
   },
   "include": [
     "**/*.ts",
-    "**/*.tsx",
-    ".expo/types/**/*.ts",
-    "expo-env.d.ts"
+    "**/*.js"
+  ],
+  "exclude": [
+    "node_modules"
   ]
 }
