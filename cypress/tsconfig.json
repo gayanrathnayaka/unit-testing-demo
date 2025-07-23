@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["es5", "dom", "es2020"],
+    "types": ["cypress", "node"],
+    "isolatedModules": false,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "allowJs": true,
+    "jsx": "react",
+    "moduleResolution": "node16",
+    "baseUrl": "..", // 👈 from inside /cypress to root
+    "paths": {
+      "@/*": ["app/*"] // ✅ same mapping from Cypress perspective
+    }
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "../cypress.config.ts"
+  ],
+  "exclude": ["node_modules"]
+}

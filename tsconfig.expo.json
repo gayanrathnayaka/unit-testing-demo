@@ -1,0 +1,18 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "moduleResolution": "node", // ✅ required for Expo
+    "baseUrl": ".",             // ✅ required for path mapping
+    "paths": {
+      "@/*": ["app/*"]          // ✅ "@/hooks/useColorScheme" will now work
+    }
+  },
+  "include": [
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    ".expo/types/**/*.ts",
+    "expo-env.d.ts"
+  ],
+  "exclude": ["cypress"]
+}
