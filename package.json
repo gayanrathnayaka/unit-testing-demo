@@ -9,7 +9,8 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "lint": "expo lint",
-    "cypress": "cypress open"
+    "cypress": "cypress open",
+    "test": "npx jest"
   },
   "dependencies": {
     "@expo/vector-icons": "^14.1.0",
